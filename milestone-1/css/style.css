@@ -87,7 +87,7 @@ body{
 .notification-banner{
     width: 100%;
     height: 80px;
-    padding: 0 10px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     background-color: #8edafb;
@@ -113,4 +113,28 @@ body{
 
 .notification-banner-text a{
     color: #757575;
+}
+
+/* Contact Finder */
+.contact-finder{
+    position: relative;
+}
+
+.contact-finder input{
+    width: 100%;
+    height: 40px;
+    padding: 0 20px 0 70px;
+    border: 5px solid #f5f3f3;
+}
+
+.contact-finder input:focus{
+    outline: none;
+}
+
+.contact-finder span.search-icon{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #babdbf;
 }
