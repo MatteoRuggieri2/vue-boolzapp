@@ -4,3 +4,48 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* COMMON */
+body{
+    background-color: #009587;
+}
+
+.app-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app{
+    width: 80%;
+    height: 95vh;
+    display: flex;
+    /* test */
+    background-color: beige;
+}
+
+/* Column */
+.col-30{
+    width: 30%;
+}
+
+.col-70{
+    width: 70%;
+}
+
+/* APP */
+.contact-page{
+
+
+    /* test */
+    background-color: rgb(161, 7, 161);
+}
+
+.chat-page{
+
+
+    /* test */
+    background-color: blue;
+}
