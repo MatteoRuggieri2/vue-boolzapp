@@ -49,3 +49,16 @@ body{
     /* test */
     background-color: blue;
 }
+
+.section-header{
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* test */
+    background-color: rgb(201, 64, 49);
+    border: 3px solid black;
+}
