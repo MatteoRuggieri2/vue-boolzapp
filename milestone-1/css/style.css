@@ -138,3 +138,28 @@ body{
     transform: translateY(-50%);
     color: #babdbf;
 }
+
+/* Contact Container */
+.contact-container{
+    width: 100%;
+    height: calc( 95vh - 190px );
+    background-color: white;
+    overflow: auto;
+}
+
+.contact-container li.contact{
+    padding: 15px 20px;
+    display: flex;
+    border-top: 1px solid #f5f3f3;
+}
+
+.contact-container li.contact:hover{
+    background-color: #e9ebea;
+    cursor: pointer;
+}
+
+.contact-container li.contact img{
+    width: 60px;
+    margin-right: 10px;
+    border-radius: 50%;
+}

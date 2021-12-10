@@ -51,10 +51,24 @@
 
                 <!-- Contact Section -->
                 <div class="contact-section">
+
+                    <!-- Contact Finder -->
                     <div class="contact-finder">
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                         <span class="search-icon"><i class="fas fa-search"></i></span>
                     </div>
+
+                    <!-- Contact Container -->
+                    <div class="contact-container">
+                        <ul>
+                            <!-- Single Contact -->
+                            <li v-for="(contact) in contacts" class="contact">
+                                <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="Personal Avatar">
+                                <span>{{ contact.name }}</span>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
 
             </div>
