@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vue-boolzapp</title>
+
+    <!-- Link per Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
@@ -16,17 +20,55 @@
 
             <!-- Contact Page -->
             <div class="contact-page col-30">
+
+                <!-- Section Header -->
                 <div class="section-header">
-                    <div>user</div>
-                    <div>icons</div>
+
+                    <!-- User -->
+                    <div class="user">
+                        <img src="img/avatar_io.jpg" alt="Personal Avatar">
+                        <span>Nome Utente</span>
+                    </div>
+
+                    <!-- User Icon -->
+                    <div>
+                        <span class="icon circle-icon"><i class="fas fa-circle-notch"></i></span>
+                        <span class="icon message-icon"><i class="fas fa-comment-alt"></i></span>
+                        <span class="icon circle-menu-icon"><i class="fas fa-ellipsis-v"></i></span>
+                    </div>
                 </div>
+
+                <!-- Notification Banner -->
+                <div class="notification-banner">
+                    
+                    <span class="bell-slash-icon"><i class="fas fa-bell-slash"></i></span>
+                    <div class="notification-banner-text">
+                        <span>Ricevi notifiche di nuovi messaggi</span>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
+                    
+                </div>
+
             </div>
 
             <!-- Chat Page -->
             <div class="chat-page col-70">
+
+                <!-- Section Header -->
                 <div class="section-header">
-                    <div>user</div>
-                    <div>icons</div>
+
+                    <!-- User -->
+                    <div class="user">
+                        <img src="img/avatar_io.jpg" alt="Personal Avatar">
+                        <span>Nome Utente</span>
+                    </div>
+
+                    <!-- User Icon -->
+                    <div>
+                        <span class="icon search-icon"><i class="fas fa-search"></i></span>
+                        <span class="icon clip-icon"><i class="fas fa-paperclip"></i></span>
+                        <span class="icon circle-menu-icon"><i class="fas fa-ellipsis-v"></i></span>
+                    </div>
                 </div>
             </div>
         </div>
