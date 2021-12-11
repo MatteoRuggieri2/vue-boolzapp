@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vue-boolzapp</title>
 
+    <!-- Link per il font 'Roboto' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    
     <!-- Link per Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
@@ -81,10 +86,10 @@
 
                     <!-- User -->
                     <div class="user">
-                        <img src="img/avatar_io.jpg" alt="Personal Avatar">
+                        <img src="img/avatar_3.jpg" alt="Personal Avatar">
                         <div class="contact-info">
-                            <span>Nome Utente</span>
-                            <span>Ultimo accesso: oggi alle </span>
+                            <span class="chat-contact-name">Samuele</span>
+                            <span class="chat-last-access">Ultimo accesso oggi alle </span>
                         </div>
                     </div>
 
@@ -99,24 +104,27 @@
                 <!-- Chat Container -->
                 <div class="chat-container">
                     
+                    <!-- Message -->
                     <div class="message-container received-message">
                         <div class="message">
-                            <span>ciao</span>
-                            <span class="message-info">ora e data lunga</span>
+                            <span class="message-text">La Marianna va in campagna</span>
+                            <span class="message-info">28/03/2020 10:10:40</span>
                         </div>
                     </div>
 
+                    <!-- Message -->
                     <div class="message-container sent-message">
                         <div class="message">
-                            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero praesentium quia cupiditate voluptatum hic a nobis beatae! Omnis laborum possimus dolorem vitae architecto necessitatibus iste natus adipisci earum, autem veritatis.</span>
-                            <span class="message-info">ora e data lunga</span>
+                            <span class="message-text">Sicuro di non aver sbagliato chat?</span>
+                            <span class="message-info">28/03/2020 10:20:10</span>
                         </div>
                     </div>
 
+                    <!-- Message -->
                     <div class="message-container received-message">
                         <div class="message">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit corporis laboriosam cum est asperiores veniam doloribus odit repudiandae cumque, facere unde? Iusto omnis consectetur perferendis nam accusantium recusandae veritatis sed.</span>
-                            <span class="message-info">ora e data lunga</span>
+                            <span class="message-text">Ah scusa!</span>
+                            <span class="message-info">28/03/2020 16:15:22</span>
                         </div>
                     </div>
 

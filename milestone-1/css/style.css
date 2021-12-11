@@ -8,6 +8,7 @@
 /* COMMON */
 body{
     background-color: #d8dad6;
+    font-family: 'Roboto', sans-serif;
 }
 
 .app-container{
@@ -22,8 +23,6 @@ body{
     width: 80%;
     height: 95vh;
     display: flex;
-    /* test */
-    background-color: beige;
 }
 
 /* Column */
@@ -42,18 +41,8 @@ body{
 }
 
 /* APP */
-.contact-page{
-
-
-    /* test */
-    background-color: rgb(161, 7, 161);
-}
-
 .chat-page{
     border-left: 1px solid #d6d6d6;
-
-    /* test */
-    background-color: blue;
 }
 
 /* Section header */
@@ -64,9 +53,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    /* test */
     background-color: #eaeaea;
+    font-size: 16px;
 }
 .section-header .icon {
     color: #b1b1b1;
@@ -81,6 +69,7 @@ body{
     width: 50px;
     border-radius: 50%;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 /* Notification Banner */
@@ -112,7 +101,12 @@ body{
 }
 
 .notification-banner-text a{
-    color: #757575;
+    font-size: 16px;
+}
+
+.notification-banner-text a{
+    font-size: 12px;
+    color: #507686;
 }
 
 /* Contact Finder */
@@ -124,7 +118,7 @@ body{
     width: 100%;
     height: 40px;
     padding: 0 20px 0 70px;
-    border: 5px solid #f5f3f3;
+    border: 6px solid #fafafa;
 }
 
 .contact-finder input:focus{
@@ -151,6 +145,7 @@ body{
     padding: 15px 20px;
     display: flex;
     border-top: 1px solid #f5f3f3;
+    font-size: 16px;
 }
 
 .contact-container li.contact:hover{
@@ -164,9 +159,20 @@ body{
     border-radius: 50%;
 }
 
+/* Section Header - Chat Container */
 .contact-info{
     display: flex;
     flex-direction: column;
+}
+
+.chat-contact-name{
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.chat-last-access{
+    font-size: 12px;
+    color: #6b7477;
 }
 
 /* Chat Container */
@@ -186,7 +192,7 @@ body{
 }
 
 div.message-container div {
-    padding: 20px;
+    padding: 12px 12px 18px;
     min-width: 35%;
     max-width: 48%;
 }
@@ -211,10 +217,17 @@ div.received-message div{
     border-radius: 10px;
 }
 
+.message-text{
+    padding-right: 20px;
+    font-size: 16px;
+}
+
 .message-info{
     position: absolute;
     bottom: 5px;
     right: 5px;
+    font-size: 10px;
+    color: #bec0c3;
 }
 
 /* Writing Area */
@@ -229,6 +242,8 @@ div.received-message div{
 
 .writing-container .icon{
     margin: 0 30px;
+    font-size: 25px;
+    color: #6a7376;
 }
 
 .writing-container input[type='text']{
@@ -237,4 +252,8 @@ div.received-message div{
     padding: 10px;
     border: none;
     border-radius: 5px;
+}
+
+.writing-container input[type='text']:focus{
+    outline: none;
 }
