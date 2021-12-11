@@ -173,8 +173,9 @@ body{
 .chat-container{
     width: 100%;
     height: calc( 100% - 140px );
-    padding: 50px 100px;
+    padding: 50px 100px 20px 100px;
     background-image: url(../img/mine.jpg);
+    overflow: auto;
 
     /* test */
     background-color: darkcyan;
@@ -220,7 +221,20 @@ div.received-message div{
 .writing-container{
     width: 100%;
     height: 70px;
+    background-color: #f3eeea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    /* test */
-    background-color: red;
+.writing-container .icon{
+    margin: 0 30px;
+}
+
+.writing-container input[type='text']{
+    width: 100%;
+    height: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
 }
