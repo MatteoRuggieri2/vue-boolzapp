@@ -119,6 +119,7 @@ const app = new Vue(
             // index --> Bisogna fornire un indice
             contactSelector(index) {
                 this.contactIndex = index;
+                this.contactResearch = '';
             },
 
             // Funzione che serve a inviare un nuovo messaggio, con testo e ora attuale,
