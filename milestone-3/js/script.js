@@ -18,8 +18,9 @@ const app = new Vue(
         data: {
 
             contactIndex: 0,
-            newTextMessage: '',
             currentDate: '',
+            newTextMessage: '',
+            newReceivedMessage: 'ok',
 
             contacts: [
                 {
@@ -123,7 +124,16 @@ const app = new Vue(
                     date: this.currentDate,
                     text: this.newTextMessage,
                     status: 'sent'
-                })
+                });
+                this.newTextMessage = '';
+
+                setTimeout(() => {
+                    this.contacts[this.contactIndex].messages.push({
+                        date: this.currentDate,
+                        text: this.newReceivedMessage,
+                        status: 'received'
+                    })
+                }, 1000);
             }
         }
     }
