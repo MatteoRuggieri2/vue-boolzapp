@@ -117,7 +117,7 @@
                 <!-- Writing Area -->
                 <div class="writing-container">
                     <span class="icon smile-icon"><i class="far fa-smile"></i></span>
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <input @keyup.enter="sendNewMessage" v-model="newTextMessage" type="text" placeholder="Scrivi un messaggio">
                     <span class="icon mic-icon"><i class="fas fa-microphone"></i></span>
                 </div>
 
@@ -125,6 +125,7 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

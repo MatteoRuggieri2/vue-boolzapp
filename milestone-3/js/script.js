@@ -18,6 +18,8 @@ const app = new Vue(
         data: {
 
             contactIndex: 0,
+            newTextMessage: '',
+            currentDate: '',
 
             contacts: [
                 {
@@ -113,6 +115,15 @@ const app = new Vue(
         methods: {
             contactSelector(index) {
                 this.contactIndex = index;
+            },
+
+            sendNewMessage() {
+                this.currentDate = dayjs().format('DD/MM/YYYY HH:mm:ss')
+                this.contacts[this.contactIndex].messages.push({
+                    date: this.currentDate,
+                    text: this.newTextMessage,
+                    status: 'sent'
+                })
             }
         }
     }
