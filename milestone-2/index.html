@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue-boolzapp Milest.2</title>
+
+    <!-- Link per il font 'Roboto' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    
+    <!-- Link per Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    
+    <!-- App Container -->
+    <div class="app-container">
+        <div id="root" class="app">
+
+            <!-- CONTACT PAGE -->
+            <div class="contact-page col-30">
+
+                <!-- Section Header -->
+                <div class="section-header">
+
+                    <!-- User -->
+                    <div class="user">
+                        <img src="img/avatar_io.jpg" alt="Personal Avatar">
+                        <span>Nome Utente</span>
+                    </div>
+
+                    <!-- User Icon -->
+                    <div>
+                        <span class="icon circle-icon"><i class="fas fa-circle-notch"></i></span>
+                        <span class="icon message-icon"><i class="fas fa-comment-alt"></i></span>
+                        <span class="icon circle-menu-icon"><i class="fas fa-ellipsis-v"></i></span>
+                    </div>
+                </div>
+
+                <!-- Notification Banner -->
+                <div class="notification-banner">
+                    
+                    <span class="bell-slash-icon"><i class="fas fa-bell-slash"></i></span>
+                    <div class="notification-banner-text">
+                        <span>Ricevi notifiche di nuovi messaggi</span>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
+                    
+                </div>
+
+                <!-- Contact Section -->
+                <div class="contact-section">
+
+                    <!-- Contact Finder -->
+                    <div class="contact-finder">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <span class="search-icon"><i class="fas fa-search"></i></span>
+                    </div>
+
+                    <!-- Contact Container -->
+                    <div class="contact-container">
+                        <ul>
+                            <!-- Single Contact -->
+                            <li v-for="(contact) in contacts" class="contact">
+                                <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="Personal Avatar">
+                                <span>{{ contact.name }}</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <!-- CHAT PAGE -->
+            <div class="chat-page col-70">
+
+                <!-- Section Header -->
+                <div class="section-header">
+
+                    <!-- User -->
+                    <div class="user">
+                        <img src="img/avatar_3.jpg" alt="Personal Avatar">
+                        <div class="contact-info">
+                            <span class="chat-contact-name">Samuele</span>
+                            <span class="chat-last-access">Ultimo accesso oggi alle </span>
+                        </div>
+                    </div>
+
+                    <!-- User Icon -->
+                    <div>
+                        <span class="icon search-icon"><i class="fas fa-search"></i></span>
+                        <span class="icon clip-icon"><i class="fas fa-paperclip"></i></span>
+                        <span class="icon circle-menu-icon"><i class="fas fa-ellipsis-v"></i></span>
+                    </div>
+                </div>
+
+                <!-- Chat Container -->
+                <div class="chat-container">
+                    
+                    <!-- Message -->
+                    <div class="message-container received">
+                        <div class="message">
+                            <span class="message-text">La Marianna va in campagna</span>
+                            <span class="message-info">28/03/2020 10:10:40</span>
+                        </div>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="message-container sent">
+                        <div class="message">
+                            <span class="message-text">Sicuro di non aver sbagliato chat?</span>
+                            <span class="message-info">28/03/2020 10:20:10</span>
+                        </div>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="message-container received">
+                        <div class="message">
+                            <span class="message-text">Ah scusa!</span>
+                            <span class="message-info">28/03/2020 16:15:22</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Writing Area -->
+                <div class="writing-container">
+                    <span class="icon smile-icon"><i class="far fa-smile"></i></span>
+                    <input type="text" placeholder="Scrivi un messaggio">
+                    <span class="icon mic-icon"><i class="fas fa-microphone"></i></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
