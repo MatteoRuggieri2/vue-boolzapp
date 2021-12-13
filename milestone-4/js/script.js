@@ -20,6 +20,7 @@ const app = new Vue(
             currentDate: '',
             newTextMessage: '',
             newReceivedMessage: 'ok',
+            contactResearch: '',
 
             contacts: [
                 {
@@ -139,7 +140,21 @@ const app = new Vue(
                         status: 'received'
                     })
                 }, 1000);
+            },
+
+            // Questa funzione permette di ricercare nel contact-finder un contatto,
+            // risolvendo anche il problema di lettere maiuscole e minuscole,
+            // dato che per lavorare trasforma tutto con toLowerCase().
+            contactResearchFunction() {
+                this.contacts.forEach((element) => {
+                    if( element.name.toLowerCase().includes(this.contactResearch.toLowerCase()) ) {
+                        element.visible = true;
+                    } else {
+                        element.visible = false;
+                    }
+                });
             }
+
         }
     }
 )

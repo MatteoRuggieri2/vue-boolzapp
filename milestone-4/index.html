@@ -59,7 +59,7 @@
 
                     <!-- Contact Finder -->
                     <div class="contact-finder">
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input v-model="contactResearch" @keyup="contactResearchFunction()" type="text" placeholder="Cerca o inizia una nuova chat">
                         <span class="search-icon"><i class="fas fa-search"></i></span>
                     </div>
 
@@ -67,7 +67,7 @@
                     <div class="contact-container">
                         <ul>
                             <!-- Single Contact -->
-                            <li v-for="(contact, index) in contacts" @click="contactSelector(index)" class="contact" :class="{ 'selected-contact': contactIndex === index }">
+                            <li v-if="contact.visible === true" v-for="(contact, index) in contacts" @click="contactSelector(index)" class="contact">
                                 <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="Personal Avatar">
                                 <span>{{ contact.name }}</span>
                             </li>
