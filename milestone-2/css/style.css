@@ -150,8 +150,12 @@ body{
     font-size: 16px;
 }
 
+.contact-container li.contact.selected-contact{
+    background-color: #ebebeb;
+}
+
 .contact-container li.contact:hover{
-    background-color: #e9ebea;
+    background-color: #f7f7f7;
     cursor: pointer;
 }
 

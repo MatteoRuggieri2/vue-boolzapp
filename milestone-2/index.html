@@ -67,7 +67,7 @@
                     <div class="contact-container">
                         <ul>
                             <!-- Single Contact -->
-                            <li v-for="(contact) in contacts" class="contact">
+                            <li v-for="(contact, index) in contacts" @click="contactSelector(index)" class="contact" :class="{ 'selected-contact': contactIndex === index }">
                                 <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="Personal Avatar">
                                 <span>{{ contact.name }}</span>
                             </li>
@@ -86,9 +86,9 @@
 
                     <!-- User -->
                     <div class="user">
-                        <img src="img/avatar_3.jpg" alt="Personal Avatar">
+                        <img :src="'img/avatar' + contacts[contactIndex].avatar + '.jpg'" alt="Personal Avatar">
                         <div class="contact-info">
-                            <span class="chat-contact-name">Samuele</span>
+                            <span class="chat-contact-name">{{ contacts[contactIndex].name }}</span>
                             <span class="chat-last-access">Ultimo accesso oggi alle </span>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                 <div class="chat-container">
                     
                     <!-- Message -->
-                    <div v-for="(element) in contacts[0].messages" class="message-container" :class="element.status">
+                    <div v-for="(element) in contacts[contactIndex].messages" class="message-container" :class="element.status">
                         <div class="message">
                             <span class="message-text">{{ element.text }}</span>
                             <span class="message-info">{{ element.date }}</span>
