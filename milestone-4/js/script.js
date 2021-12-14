@@ -120,27 +120,30 @@ const app = new Vue(
             contactSelector(index) {
                 this.contactIndex = index;
                 this.contactResearch = '';
+                this.contactResearchFunction();
             },
 
             // Funzione che serve a inviare un nuovo messaggio, con testo e ora attuale,
             // e a ricevere un messaggio con scritto "ok".
             sendNewMessage() {
-                this.currentDate = dayjs().format('DD/MM/YYYY HH:mm:ss')
-                this.contacts[this.contactIndex].messages.push({
-                    date: this.currentDate,
-                    text: this.newTextMessage,
-                    status: 'sent'
-                });
-                this.newTextMessage = '';
-
-                // Ricezione del messaggio
-                setTimeout(() => {
+                if( this.newTextMessage.trim().length > 0 ) {
+                    this.currentDate = dayjs().format('DD/MM/YYYY HH:mm:ss')
                     this.contacts[this.contactIndex].messages.push({
                         date: this.currentDate,
-                        text: this.newReceivedMessage,
-                        status: 'received'
-                    })
-                }, 1000);
+                        text: this.newTextMessage,
+                        status: 'sent'
+                    });
+                    this.newTextMessage = '';
+
+                    // Ricezione del messaggio
+                    setTimeout(() => {
+                        this.contacts[this.contactIndex].messages.push({
+                            date: this.currentDate,
+                            text: this.newReceivedMessage,
+                            status: 'received'
+                        })
+                    }, 1000);
+                }
             },
 
             // Questa funzione permette di ricercare nel contact-finder un contatto,
