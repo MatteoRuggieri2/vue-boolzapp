@@ -33,6 +33,10 @@ body{
     }
 }
 
+.d-none{
+    display: none;
+}
+
 /* Column */
 .col-30{
     width: 30%;
@@ -197,11 +201,12 @@ body{
     overflow: auto;
 }
 
-.message-container {
+.message-container {      /*da guardare*/
     margin: 20px 0;
+    position: relative;
 }
 
-div.message-container div {
+div.message-container div {      /*da guardare*/
     padding: 12px 12px 18px;
     min-width: 35%;
     max-width: 48%;
@@ -249,10 +254,24 @@ div.received div{
     cursor: pointer;
 }
 
-.message-option{
+.sent .message-option{
     position: absolute;
-    top: 25px;
+    top: 32px;
     right: 12px;
+    padding: 30px;
+    min-width: 150px;
+    list-style: none;
+    background-color: white;
+    z-index: 3;
+
+    /* test */
+    border: 1px solid black;
+}
+
+.received .message-option{
+    position: absolute;
+    top: 32px;
+    left: 12px;
     padding: 30px;
     min-width: 150px;
     list-style: none;

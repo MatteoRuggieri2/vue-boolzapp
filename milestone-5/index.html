@@ -105,18 +105,17 @@
                 <div class="chat-container">
                     
                     <!-- Message -->
-                    <div v-for="(element) in contacts[contactIndex].messages" class="message-container" :class="element.status">
+                    <div v-for="(element, index) in contacts[contactIndex].messages" class="message-container" :class="element.status">
                         <div class="message">
                             <span class="message-text">{{ element.text }}</span>
                             <span class="message-info">{{ element.date }}</span>
-                            <span class="arrow-down-icon"><i class="fas fa-chevron-down"></i></span>
-                            <span>
-                                <ul class="message-option">
-                                    <li>Info messaggio</li>
-                                    <li>Elimina messaggio</li>
-                                </ul>
-                            </span>
+                            <span @click="showMessageOption(index)" class="arrow-down-icon"><i class="fas fa-chevron-down"></i></span>
+                       
                         </div>
+                        <ul class="message-option" :class="{ 'd-none': element.messageOption === false }">
+                            <li>Message info</li>
+                            <li @click="deleteMessage(index)">Delete message</li>
+                        </ul>
                     </div>
 
                 </div>
