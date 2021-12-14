@@ -67,7 +67,7 @@
                     <div class="contact-container">
                         <ul>
                             <!-- Single Contact -->
-                            <li v-if="contact.visible === true" v-for="(contact, index) in contacts" @click="contactSelector(index)" class="contact">
+                            <li v-if="contact.visible === true" v-for="(contact, index) in contacts" @click="contactSelector(index)" class="contact" :class="{ 'selected-contact': contactIndex === index }">
                                 <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="Personal Avatar">
                                 <span>{{ contact.name }}</span>
                             </li>
