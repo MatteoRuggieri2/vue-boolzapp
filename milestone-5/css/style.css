@@ -276,19 +276,19 @@ body{
     position: absolute;
     top: 32px;
     right: 12px;
-    padding: 30px;
+    padding: 22px;
     min-width: 150px;
     list-style: none;
     background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #333333;
     z-index: 3;
-
-    /* test */
-    border: 1px solid black;
 }
 
 .message-option li{
     font-size: 16px;
     margin-bottom: 20px;
+    color: #6b7477;
     cursor: pointer;
 }
 
