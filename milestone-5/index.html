@@ -105,19 +105,28 @@
                 <div class="chat-container">
                     
                     <!-- Message -->
-                    <div v-for="(element, index) in contacts[contactIndex].messages" class="message-container" :class="element.status">
-                        <div class="message">
-                            <span class="message-text">{{ element.text }}</span>
-                            <span class="message-info">{{ element.date }}</span>
-                            <span @click="showMessageOption(index)" class="arrow-down-icon"><i class="fas fa-chevron-down"></i></span>
-                       
-                        </div>
-                        <ul class="message-option" :class="{ 'd-none': element.messageOption === false }">
-                            <li>Message info</li>
-                            <li @click="deleteMessage(index)">Delete message</li>
-                        </ul>
-                    </div>
+                    <!-- <div v-for="(element, index) in contacts[contactIndex].messages" class="message-container" :class="element.status"> -->
+                        
+                        <span v-for="(element, index) in contacts[contactIndex].messages" class="prova-pos-absolute" :class="element.status">
+                            <div class="message">
+                                <span class="message-text">{{ element.text }}</span>
+                                <!-- <span class="message-info">{{ element.date }}</span> -->
 
+                            </div>
+
+                            <span class="message-info">{{ element.date }}</span>
+                            <span @click="showMessageOption(index)" class="arrow-down-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+    
+                            <ul class="message-option" :class="{ 'd-none': element.messageOption === false }">
+                                <li>Message info</li>
+                                <li @click="deleteMessage(index)">Delete message</li>
+                            </ul>
+                        </span>
+                    <!-- </div> -->
+
+                    
                 </div>
 
                 <!-- Writing Area -->

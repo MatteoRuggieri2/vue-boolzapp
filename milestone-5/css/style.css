@@ -201,36 +201,35 @@ body{
     overflow: auto;
 }
 
-.message-container {      /*da guardare*/
-    margin: 20px 0;
+.prova-pos-absolute{
     position: relative;
-}
-
-div.message-container div {      /*da guardare*/
-    padding: 12px 12px 18px;
-    min-width: 35%;
+    display: inline-block;
     max-width: 48%;
-}
-
-div.sent{
-    display: flex;
-    justify-content: flex-end;
-}
-
-div.sent div{
-    display: inline-block;
-    background-color: #d5f9ba;
-}
-
-div.received div{
-    display: inline-block;
-    background-color: white;
+    min-width: 38%;
+    border-radius: 10px;
 }
 
 .message{
     position: relative;
     border-radius: 10px;
-    z-index: 2;
+
+    padding: 12px 12px 18px;
+}
+
+.sent{
+    float: right;
+    clear: both;
+    background-color: #d5f9ba;
+    margin: 20px 0;
+
+}
+
+.received{
+    float: left;
+    clear: both;
+    background-color: white;
+    margin-bottom: 20px;
+
 }
 
 .message-text{
@@ -246,7 +245,7 @@ div.received div{
     color: #bec0c3;
 }
 
-.message .arrow-down-icon{
+.arrow-down-icon{
     position: absolute;
     top: 5px;
     right: 10px;
@@ -254,24 +253,10 @@ div.received div{
     cursor: pointer;
 }
 
-.sent .message-option{
+.message-option{
     position: absolute;
     top: 32px;
     right: 12px;
-    padding: 30px;
-    min-width: 150px;
-    list-style: none;
-    background-color: white;
-    z-index: 3;
-
-    /* test */
-    border: 1px solid black;
-}
-
-.received .message-option{
-    position: absolute;
-    top: 32px;
-    left: 12px;
     padding: 30px;
     min-width: 150px;
     list-style: none;
