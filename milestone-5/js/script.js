@@ -21,6 +21,9 @@ const app = new Vue(
             newTextMessage: '',
             newReceivedMessage: 'ok',
             contactResearch: '',
+            lunghezzaParola: '25',
+            lastMessage: 'ciao',
+            caratteriFrase: [],
 
             contacts: [
                 {
@@ -142,7 +145,8 @@ const app = new Vue(
                     this.contacts[this.contactIndex].messages.push({
                         date: this.currentDate,
                         text: this.newTextMessage,
-                        status: 'sent'
+                        status: 'sent',
+                        messageOption: false
                     });
                     this.newTextMessage = '';
 
@@ -151,7 +155,8 @@ const app = new Vue(
                         this.contacts[this.contactIndex].messages.push({
                             date: this.currentDate,
                             text: this.newReceivedMessage,
-                            status: 'received'
+                            status: 'received',
+                            messageOption: false
                         })
                     }, 1000);
                 }
@@ -176,7 +181,8 @@ const app = new Vue(
             },
 
 
-            // problema con l'indice
+            // Questa funzione permette di eliminare il messaggio selezionato.
+            // index --> per funzionare ha bisogno dell'indice del messaggio da eliminare
             deleteMessage(index) {
                 console.log(index);
                 this.contacts[this.contactIndex].messages.splice(index, 1)

@@ -159,6 +159,7 @@ body{
     display: flex;
     border-top: 1px solid #f5f3f3;
     font-size: 16px;
+    position: relative;
 }
 
 .contact-container li.contact.selected-contact{
@@ -174,6 +175,24 @@ body{
     width: 60px;
     margin-right: 10px;
     border-radius: 50%;
+}
+
+.contact-preview{
+    display: flex;
+    flex-direction: column;
+}
+
+.last-message{
+    color: #b6b9bc;
+    font-size: 14px;
+}
+
+.last-time{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #b6b9bc;
+    font-size: 10px;
 }
 
 /* Section Header - Chat Container */

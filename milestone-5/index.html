@@ -69,7 +69,11 @@
                             <!-- Single Contact -->
                             <li v-if="contact.visible === true" v-for="(contact, index) in contacts" @click="contactSelector(index)" class="contact" :class="{ 'selected-contact': contactIndex === index }">
                                 <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="Personal Avatar">
-                                <span>{{ contact.name }}</span>
+                                <div class="contact-preview">
+                                    <span>{{ contact.name }}</span>
+                                    <span class="last-message">{{ contact.messages[contact.messages.length - 1].text }}</span>
+                                </div>
+                                <span class="last-time">{{ contact.messages[contact.messages.length - 1].date }}</span>
                             </li>
                         </ul>
                     </div>
@@ -105,28 +109,27 @@
                 <div class="chat-container">
                     
                     <!-- Message -->
-                    <!-- <div v-for="(element, index) in contacts[contactIndex].messages" class="message-container" :class="element.status"> -->
+                    <span v-for="(element, index) in contacts[contactIndex].messages" class="prova-pos-absolute" :class="element.status">
                         
-                        <span v-for="(element, index) in contacts[contactIndex].messages" class="prova-pos-absolute" :class="element.status">
-                            <div class="message">
-                                <span class="message-text">{{ element.text }}</span>
-                                <!-- <span class="message-info">{{ element.date }}</span> -->
+                        <!-- Text -->
+                        <div class="message">
+                            <span class="message-text">{{ element.text }}</span>
+                        </div>
 
-                            </div>
+                        <!-- Date -->
+                        <span class="message-info">{{ element.date }}</span>
 
-                            <span class="message-info">{{ element.date }}</span>
-                            <span @click="showMessageOption(index)" class="arrow-down-icon">
-                                <i class="fas fa-chevron-down"></i>
-                            </span>
-    
-                            <ul class="message-option" :class="{ 'd-none': element.messageOption === false }">
-                                <li>Message info</li>
-                                <li @click="deleteMessage(index)">Delete message</li>
-                            </ul>
+                        <!-- Message Arrow -->
+                        <span @click="showMessageOption(index)" class="arrow-down-icon">
+                            <i class="fas fa-chevron-down"></i>
                         </span>
-                    <!-- </div> -->
-
-                    
+    
+                        <!-- Message Option -->
+                        <ul class="message-option" :class="{ 'd-none': element.messageOption === false }">
+                            <li>Message info</li>
+                            <li @click="deleteMessage(index)">Delete message</li>
+                        </ul>
+                    </span>
                 </div>
 
                 <!-- Writing Area -->
