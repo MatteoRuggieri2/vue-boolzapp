@@ -177,7 +177,15 @@ const app = new Vue(
 
             // Questa funzione serve per far comparire il menù a tendina sui messaggi.
             showMessageOption(index) {
+                // this.contacts[this.contactIndex].messages.forEach((element) => {
+                //     if( element.messageOption === true ) {
+                //         element.messageOption = false;
+                //     }
+                // });
+
                 this.contacts[this.contactIndex].messages[index].messageOption = !this.contacts[this.contactIndex].messages[index].messageOption
+            
+                
             },
 
 

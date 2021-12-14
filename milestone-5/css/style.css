@@ -220,18 +220,18 @@ body{
     overflow: auto;
 }
 
-.prova-pos-absolute{
+.message-container{
     position: relative;
     display: inline-block;
     max-width: 48%;
     min-width: 38%;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .message{
     position: relative;
     border-radius: 10px;
-
     padding: 12px 12px 18px;
 }
 
@@ -239,7 +239,6 @@ body{
     float: right;
     clear: both;
     background-color: #d5f9ba;
-    margin: 20px 0;
 
 }
 
@@ -247,7 +246,6 @@ body{
     float: left;
     clear: both;
     background-color: white;
-    margin-bottom: 20px;
 
 }
 
@@ -270,6 +268,11 @@ body{
     right: 10px;
     color: #bec0c3;
     cursor: pointer;
+    display: none;
+}
+
+.message-container:hover .arrow-down-icon{
+    display: inline-block;
 }
 
 .message-option{
@@ -281,7 +284,7 @@ body{
     list-style: none;
     background-color: white;
     border-radius: 5px;
-    box-shadow: 0 0 10px #333333;
+    box-shadow: 0 0 5px #ababab;
     z-index: 3;
 }
 
@@ -290,6 +293,10 @@ body{
     margin-bottom: 20px;
     color: #6b7477;
     cursor: pointer;
+}
+
+.message-option li:hover{
+    color: #b4b3b3;
 }
 
 .message-option li:last-child{
