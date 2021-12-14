@@ -63,6 +63,7 @@ body{
     justify-content: space-between;
     background-color: #eaeaea;
     font-size: 16px;
+    z-index: 10;
 }
 .section-header .icon {
     color: #b1b1b1;
@@ -224,6 +225,7 @@ div.received div{
 .message{
     position: relative;
     border-radius: 10px;
+    z-index: 2;
 }
 
 .message-text{
@@ -239,6 +241,38 @@ div.received div{
     color: #bec0c3;
 }
 
+.message .arrow-down-icon{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #bec0c3;
+    cursor: pointer;
+}
+
+.message-option{
+    position: absolute;
+    top: 25px;
+    right: 12px;
+    padding: 30px;
+    min-width: 150px;
+    list-style: none;
+    background-color: white;
+    z-index: 3;
+
+    /* test */
+    border: 1px solid black;
+}
+
+.message-option li{
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.message-option li:last-child{
+    margin-bottom: 0;
+}
+
 /* Writing Area */
 .writing-container{
     width: 100%;
@@ -247,6 +281,7 @@ div.received div{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 20;
 }
 
 .writing-container .icon{
