@@ -71,9 +71,9 @@
                                 <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="Personal Avatar">
                                 <div class="contact-preview">
                                     <span>{{ contact.name }}</span>
-                                    <span class="last-message">{{ contact.messages[contact.messages.length - 1].text }}</span>
+                                    <span class="last-message">{{ lastMessageText(contact) }}</span>
                                 </div>
-                                <span class="last-time">{{ contact.messages[contact.messages.length - 1].date }}</span>
+                                <span class="last-time">{{ lastMessageDate(contact) }}</span>
                             </li>
                         </ul>
                     </div>

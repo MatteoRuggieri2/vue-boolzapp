@@ -21,7 +21,6 @@ const app = new Vue(
             newTextMessage: '',
             newReceivedMessage: 'ok',
             contactResearch: '',
-            lastMessage: '',
             activeMessage: null,
 
             contacts: [
@@ -192,6 +191,22 @@ const app = new Vue(
             deleteMessage(index) {
                 this.activeMessage= null;
                 this.contacts[this.contactIndex].messages.splice(index, 1)
+            },
+
+            lastMessageText(contact) {
+                const messagesArray = contact.messages;
+                const lastFullMessage = messagesArray[messagesArray.length - 1].text;
+                let lastCutMessage = lastFullMessage.slice(0, 20)
+                if(lastCutMessage.length > 19) {
+                    lastCutMessage += '...'
+                }
+
+                return lastCutMessage;
+            },
+
+            lastMessageDate(contact) {
+                const messagesArray = contact.messages;
+                return messagesArray[messagesArray.length - 1].date;
             }
 
         }
