@@ -21,9 +21,8 @@ const app = new Vue(
             newTextMessage: '',
             newReceivedMessage: 'ok',
             contactResearch: '',
-            lunghezzaParola: '25',
-            lastMessage: 'ciao',
-            caratteriFrase: [],
+            lastMessage: '',
+            activeMessage: null,
 
             contacts: [
                 {
@@ -135,12 +134,15 @@ const app = new Vue(
                 this.contactIndex = index;
                 this.contactResearch = '';
                 this.contactResearchFunction();
+                this.activeMessage= null;
+
             },
 
             // Funzione che serve a inviare un nuovo messaggio, con testo e ora attuale,
             // e a ricevere un messaggio con scritto "ok".
             sendNewMessage() {
                 if( this.newTextMessage.trim().length > 0 ) {
+                    this.activeMessage = null;
                     this.currentDate = dayjs().format('DD/MM/YYYY HH:mm:ss')
                     this.contacts[this.contactIndex].messages.push({
                         date: this.currentDate,
@@ -177,22 +179,18 @@ const app = new Vue(
 
             // Questa funzione serve per far comparire il menù a tendina sui messaggi.
             showMessageOption(index) {
-                // this.contacts[this.contactIndex].messages.forEach((element) => {
-                //     if( element.messageOption === true ) {
-                //         element.messageOption = false;
-                //     }
-                // });
-
-                this.contacts[this.contactIndex].messages[index].messageOption = !this.contacts[this.contactIndex].messages[index].messageOption
-            
+                if( index === this.activeMessage ) {
+                    this.activeMessage = null;
+                } else {
+                    this.activeMessage = index;
+                }
                 
             },
-
 
             // Questa funzione permette di eliminare il messaggio selezionato.
             // index --> per funzionare ha bisogno dell'indice del messaggio da eliminare
             deleteMessage(index) {
-                console.log(index);
+                this.activeMessage= null;
                 this.contacts[this.contactIndex].messages.splice(index, 1)
             }
 

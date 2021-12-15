@@ -125,7 +125,7 @@
                         </span>
     
                         <!-- Message Option -->
-                        <ul class="message-option" :class="{ 'd-none': element.messageOption === false }">
+                        <ul v-if="index === activeMessage" class="message-option">
                             <li>Message info</li>
                             <li @click="deleteMessage(index)">Delete message</li>
                         </ul>
