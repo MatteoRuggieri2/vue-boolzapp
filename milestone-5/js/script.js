@@ -178,6 +178,9 @@ const app = new Vue(
 
             // Questa funzione serve per far comparire il menù a tendina sui messaggi.
             showMessageOption(index) {
+
+                // Effetto toggle, se l'indice è presente, vuol dire che era già
+                // stato cliccato, quindi lo nascondo rendendolo inattivo, altrimenti viceversa.
                 if( index === this.activeMessage ) {
                     this.activeMessage = null;
                 } else {
